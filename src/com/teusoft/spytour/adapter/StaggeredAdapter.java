@@ -28,7 +28,6 @@ public class StaggeredAdapter extends BaseAdapter {
                             List<Tour> listTour) {
         this.context = context;
         this.listTour = listTour;
-
 //        mLoader = new ImageLoader(context);
         mLoader = ImageLoader.getInstance();
         mLoader.init(ImageLoaderConfiguration.createDefault(context));
@@ -69,9 +68,9 @@ public class StaggeredAdapter extends BaseAdapter {
             holder.imageView = (ScaleImageView) convertView.findViewById(R.id.imageView1);
             holder.descriptionTv = (TextView) convertView.findViewById(R.id.description_tv);
             convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
         }
-
-        holder = (ViewHolder) convertView.getTag();
         Tour tour = listTour.get(position);
         // Bind data to view
 //        mLoader.DisplayImage(tour.getImageUrl(), holder.imageView);
