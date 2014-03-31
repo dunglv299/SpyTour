@@ -16,6 +16,8 @@
     <orderEntry type="module" module-name="actionbarsherlock" />
     <orderEntry type="module" module-name="StaggeredGridView-master" />
     <orderEntry type="library" name="android-support-v4" level="project" />
+    <orderEntry type="library" name="Gson-Lib" level="project" />
+    <orderEntry type="library" name="universal-image-loader-1.9.1" level="project" />
   </component>
 </module>
 
