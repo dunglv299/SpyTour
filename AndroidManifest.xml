@@ -27,6 +27,22 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+                android:name=".activity.DetailActivity"
+                android:screenOrientation="landscape"
+                android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".activity.BaseActivity"/>
+        </activity>
+        <activity
+                android:name=".activity.BookActivity"
+                android:screenOrientation="landscape"
+                android:parentActivityName=".activity.DetailActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".activity.BaseActivity"/>
+        </activity>
     </application>
 
 </manifest>

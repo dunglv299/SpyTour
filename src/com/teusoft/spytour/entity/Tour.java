@@ -2,10 +2,12 @@ package com.teusoft.spytour.entity;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by DungLV on 31/3/2014.
  */
-public class Tour {
+public class Tour implements Serializable {
     @SerializedName("id")
     private int tourId;
 

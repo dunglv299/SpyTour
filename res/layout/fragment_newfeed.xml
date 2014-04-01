@@ -1,16 +1,44 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:staggered="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/green"
-    tools:context=".MainActivity" >
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:staggered="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/green"
+                tools:context=".MainActivity">
 
     <com.origamilabs.library.views.StaggeredGridView
-        android:id="@+id/staggeredGridView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        staggered:drawSelectorOnTop="true"
-        staggered:numColumns="3" />
+            android:id="@+id/staggeredGridView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            staggered:drawSelectorOnTop="true"
+            staggered:numColumns="3"/>
 
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/loading_pb"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_transparent_80"
+            android:gravity="center"
+            android:visibility="visible">
+
+        <ProgressBar
+                android:id="@+id/search_progressbar"
+                style="?android:attr/progressBarStyleInverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"/>
+
+        <TextView
+                android:id="@+id/search_progress_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@id/search_progressbar"
+                android:layout_centerInParent="true"
+                android:paddingLeft="20dp"
+                android:text="Loading..."/>
+    </RelativeLayout>
 </RelativeLayout>

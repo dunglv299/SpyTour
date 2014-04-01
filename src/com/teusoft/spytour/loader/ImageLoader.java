@@ -1,3 +1,4 @@
+/*
 package com.teusoft.spytour.loader;
 
 import android.content.Context;
@@ -15,11 +16,13 @@ import java.util.WeakHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+*/
 /**
  * Using LazyList via
  * https://github.com/thest1/LazyList/tree/master/src/com/fedorvlasov/lazylist
  * for the example since its super lightweight I barely modified this file
- */
+ *//*
+
 public class ImageLoader {
 
 	MemoryCache memoryCache = new MemoryCache();
@@ -192,3 +195,4 @@ public class ImageLoader {
 	}
 
 }
+*/
