@@ -175,7 +175,13 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"/>
             </TableRow>
-
         </TableLayout>
+
+        <ProgressBar
+                android:id="@+id/pro_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_centerInParent="true"/>
     </RelativeLayout>
 </ScrollView>

@@ -20,6 +20,7 @@ import com.teusoft.spytour.util.Constant;
  * Created by DungLV on 1/4/2014.
  */
 public class DetailActivity extends BaseActivity implements View.OnClickListener {
+
     private Tour tour;
     TextView tourName;
     ImageView tourImg;
@@ -68,8 +69,16 @@ public class DetailActivity extends BaseActivity implements View.OnClickListener
             case R.id.book_btn:
                 Intent i = new Intent(this, BookActivity.class);
                 i.putExtra("tour", tour);
-                startActivity(i);
+                startActivityForResult(i, 1);
                 break;
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            finish();
         }
     }
 }
